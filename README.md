@@ -50,7 +50,7 @@ python train.py --config config/train_desc.yaml
 # example train the detection network
 python train.py --config config/train_det.yaml
 ```
-
+TODO
 
 ## Feature extraction
 We provide code for extracting SCFeat features on HPatches dataset.
@@ -62,8 +62,8 @@ python extract_features.py --config config/extract_hpatches.yaml
 ```
 
 
-## Cite
-Please cite our work if you find it useful: 
+## BibTeX
+If you use this code in your project, please cite the following paper:: 
 ```bibtex
 @article{DBLP:journals/corr/abs-2212-07047,
   author    = {Jiayuan Sun and
@@ -83,4 +83,3 @@ Please cite our work if you find it useful:
 }
 ```
 
-**Acknowledgements**. 
