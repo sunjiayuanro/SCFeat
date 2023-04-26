@@ -1,4 +1,4 @@
-# Shared Coupling-bridge for Weakly Supervised Local Feature Learning
+## Shared Coupling-bridge for Weakly Supervised Local Feature Learning
 
 This repository contains a PyTorch implementation of the paper:
 
@@ -15,12 +15,13 @@ Jiewen Zhu
 
 <!-- TMM -->
 
-## Abstract
+**Abstract**
 
 Sparse local feature extraction is usually believed to be of important significance in typical vision tasks such as simultaneous localization and mapping, image matching and 3D reconstruction. At present, it still has some deficiencies needing further improvement, mainly including the discrimination power of extracted local descriptors, the localization accuracy of detected keypoints, and the efficiency of local feature learning. This paper focuses on promoting the currently popular sparse local feature learning with camera pose supervision. Therefore, it pertinently proposes a Shared Coupling-bridge scheme with four light-weight yet effective improvements for weakly-supervised local feature (SCFeat) learning. It mainly contains: i) the Feature-Fusion-ResUNet Backbone (F2R-Backbone) for local descriptors learning, ii) a shared coupling-bridge normalization to improve the decoupling training of description network and detection network, iii) an improved detection network with peakiness measurement to detect keypoints and iv) the fundamental matrix error as a reward factor to further optimize feature detection training. Extensive experiments prove that our SCFeat improvement is effective. It could often obtain a state-of-the-art performance on classic image matching and visual localization. In terms of 3D reconstruction, it could still achieve competitive results.
 
 
-## Requirements
+**Requirements**
+
 ```bash
 # Create conda environment with torch 1.8.2 and CUDA 11.1
 conda create -n scfeat
@@ -34,12 +35,19 @@ pip uninstall opencv-contrib-python
 pip install opencv-python==3.4.2.17
 pip install opencv-contrib-python==3.4.2.17
 ```
+CUDA 11.7
+```bash
+conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.7 -c pytorch -c nvidia
+```
 
-## Pretrained Model
+
+**Pretrained Model**
+
 <!-- Pretrained model can be downloaded using this google drive [link]() -->
-TODO
+coming soon...
 
-## Training
+**Training**
+
 Download the preprocessed subset of MegaDepth from [CAPS](https://github.com/qianqianwang68/caps), and run the following command: 
 
 ```bash
@@ -53,7 +61,8 @@ python train.py --config config/train_desc.yaml
 python train.py --config config/train_det.yaml
 ```
 
-## Feature extraction
+**Feature extraction**
+
 We provide code for extracting SCFeat features on HPatches dataset.
 To download and use the HPatches Sequences, please refer to this [link](https://github.com/mihaidusmanu/d2-net/tree/master/hpatches_sequences).
 
@@ -62,9 +71,8 @@ To extract SCFeat features on HPatches dataset, download the pretrained model, m
 python extract_features.py --config config/extract_hpatches.yaml
 ```
 
-TODO
+**BibTeX**
 
-## BibTeX
 If you use this code in your project, please cite the following paper:
 ```bibtex
 @article{DBLP:journals/corr/abs-2212-07047,
