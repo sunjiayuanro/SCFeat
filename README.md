@@ -23,7 +23,8 @@ Sparse local feature extraction is usually believed to be of important significa
 ## Requirements
 ```bash
 # Create conda environment with torch 1.8.2 and CUDA 11.1
-conda env create -f environment.yml
+conda create -n scfeat
+pip install -r requirements.yaml
 conda activate scfeat
 ```
 If you encounter problems with OpenCV, try to uninstall your current opencv packages and reinstall them again
@@ -47,7 +48,7 @@ python train.py --config config/train_desc.yaml
 ```
 
 ```bash
-# example train the detection network
+# train the detection network
 python train.py --config config/train_det.yaml
 ```
 
