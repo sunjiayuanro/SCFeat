@@ -44,6 +44,7 @@ Download the preprocessed subset of MegaDepth from [CAPS](https://github.com/qia
 
 ```bash
 # train the description network
+export CUDA_VISIBLE_DEVICES=0
 python train.py --config config/train_desc.yaml
 ```
 
