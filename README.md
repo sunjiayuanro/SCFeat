@@ -35,11 +35,6 @@ pip uninstall opencv-contrib-python
 pip install opencv-python==3.4.2.17
 pip install opencv-contrib-python==3.4.2.17
 ```
-CUDA 11.7
-```bash
-conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.7 -c pytorch -c nvidia
-```
-
 
 **Pretrained Model**
 
